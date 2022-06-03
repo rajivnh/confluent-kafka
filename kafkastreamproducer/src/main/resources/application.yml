@@ -1,0 +1,19 @@
+server:
+  port: 5000
+ 
+spring:
+  cloud:
+    stream:
+      bindings:
+        producer-out-0:
+          destination: KFP-STREAM
+  kafka:
+    bootstrap-servers:
+    - "localhost:9092"
+    
+spring.cloud.stream.kafka.bindings.producer-in-0:
+  producer:
+    configuration:
+      value-deserializer:
+        org.springframework.kafka.support.serializer.JsonSerializer
+                    
