@@ -8,5 +8,4 @@ spring:
     producer:
       value-serializer:
         org.springframework.kafka.support.serializer.JsonSerializer
-      batch-size: 10
         
